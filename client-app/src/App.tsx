@@ -20,7 +20,6 @@ class App extends React.Component {
   addItem = () => {
     const { todos, inputValue } = this.state as AppState;
     todos.push(inputValue);
-    console.log(todos);
     this.setState({ todos, inputValue: "" });
   };
 
@@ -39,7 +38,6 @@ class App extends React.Component {
       toDosRendered = this.renderTodos(todos);
     }
     const disabled = !inputValue.length;
-    console.log(disabled);
 
     return (
       <div className={styles.app}>
