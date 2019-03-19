@@ -25,7 +25,7 @@ class App extends React.Component {
 
   renderTodos = (todos: string[]) => {
     return todos.map((todo, index) => (
-      <span key={index}>
+      <span className={styles.todoItems} key={index}>
         {index + 1}: {todo}
       </span>
     ));
@@ -41,16 +41,18 @@ class App extends React.Component {
 
     return (
       <div className={styles.app}>
-        <input
-          onChange={e => {
-            this.setState({ inputValue: e.target.value });
-          }}
-          value={inputValue}
-        />
-        <button onClick={this.addItem} disabled={disabled}>
-          Add todo
-        </button>
-        {toDosRendered}
+        <div className={styles.todoContainer}>
+          <input
+            onChange={e => {
+              this.setState({ inputValue: e.target.value });
+            }}
+            value={inputValue}
+          />
+          <button onClick={this.addItem} disabled={disabled}>
+            Add todo
+          </button>
+          {toDosRendered}
+        </div>
       </div>
     );
   }

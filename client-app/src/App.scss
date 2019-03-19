@@ -1,12 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
 .app {
-    position: absolute;
-    top: 10%;
-    left: 42%;
+    align-items: center;
     display: flex;
-    flex-direction: column;
-    width: 20rem;
+    justify-content: center;
 }
 
 .app > * {
     margin-top: 1rem;
+}
+
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+
+    input {
+        font-size: 16px;
+        height: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 0.25rem;
+    }
+}
+
+.todoItems {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
 }
